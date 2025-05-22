@@ -1,0 +1,18 @@
+https://stackoverflow.com/questions/33702163/why-to-use-static-with-recyclerview-viewholder
+
+Por que la clase que extiende a recyclerview tiene que ser Static
+
+
+https://developer.android.com/develop/ui/views/layout/recyclerview
+
+RecyclerView y como implementarlo como lista de objetos
+
+
+
+https://adapty.io/blog/android-layouts-and-views/
+
+What's a view in android. UI layouts and views.
+
+https://www.reddit.com/r/androiddev/comments/rrspel/rule_of_thumb_for_when_to_use_oncreateview/
+
+Diferencias entre OnViewCreate y OnCreateView
