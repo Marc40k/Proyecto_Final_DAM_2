@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_vistas"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Vistas"
+
+        />
+    <item
+        android:id="@+id/id_lista"
+        android:icon="@android:drawable/btn_star_big_off"
+        android:title="Lista"
+
+        />
+    <item
+        android:id="@+id/id_nueva"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="Nueva"
+
+
+        />
+</menu>

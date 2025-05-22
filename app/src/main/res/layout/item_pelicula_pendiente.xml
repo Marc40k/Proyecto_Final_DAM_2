@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<!-- CLASE DEPRECADA (deprecated?) -->
+
+
+
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    style="@style/TarjetaPelicula">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvTituloPendiente"
+            style="@style/TextoTituloPelicula"
+            android:text="Título de la Película" />
+
+        <TextView
+            android:id="@+id/tvFechaAdicion"
+            style="@style/TextoFecha"
+            android:text="Fecha de visualización"
+            android:layout_below="@id/tvTituloPendiente"
+            />
+
+        <Button
+            android:id="@+id/btnVer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="VER"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

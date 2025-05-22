@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="25dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Añadir nueva película a la Lista"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputTitulo"
+            android:hint="Título en inglés"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/inputAnyo"
+            android:hint="Año"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/inputGenero"
+            android:hint="Género"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/inputDirector"
+            android:hint="Director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/inputNota"
+            android:hint="Notas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minHeight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/inputCalificacion"
+            android:hint="Calificación (1-10)"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            />
+
+        <EditText
+            android:id="@+id/inputFechaAdicion"
+            android:hint="dd/MM/yyyy Añadida"
+            android:focusable="true"
+            android:enabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchEstado"
+            android:text="¿Vista?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:text="Guardar Película"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>
