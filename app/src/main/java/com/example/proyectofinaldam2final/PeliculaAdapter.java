@@ -34,7 +34,7 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
     }
 
     public class PeliculaViewHolder extends RecyclerView.ViewHolder {
-        TextView tvTitulo, tvFecha, tvCalificacion, tvNotas, tvDirector, tvGenero, tvAnyo;
+        TextView tvTitulo, tvFecha, tvCalificacion, tvNotas, tvDirector, tvGenero, tvAnyo, tvTiempoEnDias;
         Button btnVer;
         LinearLayout layExpandible;
         public PeliculaViewHolder(View itemView) {
@@ -48,6 +48,7 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
             tvDirector = itemView.findViewById(R.id.tvDirector);
             tvGenero = itemView.findViewById(R.id.tvGenero);
             tvAnyo = itemView.findViewById(R.id.tvAnyo);
+            tvTiempoEnDias = itemView.findViewById(R.id.tiempoEnDias);
         }
 
         public void bind(Pelicula pelicula, OnPeliculaClickListener listener, int position) {
@@ -62,6 +63,20 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
                 tvDirector.setText(pelicula.getDirector() != null && !pelicula.getDirector().isEmpty()
                         ? "Director: " + pelicula.getDirector()
                         : "Sin director");
+                tvGenero.setText(pelicula.getGenero() != null && !pelicula.getGenero().isEmpty()
+                        ? "Género: " + pelicula.getGenero()
+                        : "Género desconocido");
+                tvAnyo.setText(pelicula.getAnyo() > 0 ? "Año: " + pelicula.getAnyo() : "Año desconocido");
+                tvNotas.setText(pelicula.getNota() != null && !pelicula.getNota().isEmpty()
+                        ? "Notas: " + pelicula.getNota()
+                        : "Sin notas");
+                if (pelicula.isVista()) {
+                    tvTiempoEnDias.setVisibility(View.VISIBLE);
+                    tvTiempoEnDias.setText(pelicula.diasEnLaLista() + " días");
+                } else {
+                    tvTiempoEnDias.setVisibility(View.GONE);
+                }
+
             } else {
                 layExpandible.setVisibility(View.GONE);
             }

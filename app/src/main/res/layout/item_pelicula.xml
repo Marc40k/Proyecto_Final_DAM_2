@@ -80,6 +80,14 @@
                 android:text="Notas sobre la película"
                 android:textSize="14sp"
                 />
+            <TextView
+                android:id="@+id/tiempoEnDias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aún no la has visto"
+                android:textSize="14sp"
+                android:visibility="gone"
+                />
 
         </LinearLayout>
 

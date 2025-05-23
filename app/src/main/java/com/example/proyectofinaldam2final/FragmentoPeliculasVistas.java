@@ -40,7 +40,7 @@ public class FragmentoPeliculasVistas extends Fragment {
         db = AppDatabase.getInstance(requireContext());
 
 //        PeliculaAdapter.OnPeliculaClickListener listener = pelicula -> {
-//            // Aquí puedes poner una lógica de prueba como mostrar un Toast
+//            // Lógica de prueba - mostrar un Toast
 //            Toast.makeText(requireContext(), "Has hecho clic en: " + pelicula.getTitulo(), Toast.LENGTH_SHORT).show();
 //
 //            // En el futuro: expandir el rectángulo o abrir un detalle

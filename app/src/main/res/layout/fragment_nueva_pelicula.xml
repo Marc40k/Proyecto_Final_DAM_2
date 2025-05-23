@@ -71,7 +71,7 @@
 
         <EditText
             android:id="@+id/inputFechaAdicion"
-            android:hint="dd/MM/yyyy Añadida"
+            android:hint="Añadida el dd/MM/yyyy"
             android:focusable="true"
             android:enabled="true"
             android:layout_width="match_parent"
