@@ -22,6 +22,8 @@ public interface PeliculaDao {
     @Query("SELECT * FROM Pelicula WHERE vista = 1 ORDER BY fechaVista DESC")
     List<Pelicula> getPeliculasVistas();
 
+
+
     @Query("SELECT * FROM Pelicula WHERE vista = 0 ORDER BY fechaAdicion DESC")
     List<Pelicula> getPeliculasPendientes();
 

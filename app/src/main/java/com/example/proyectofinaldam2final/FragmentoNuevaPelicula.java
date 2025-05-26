@@ -61,6 +61,10 @@ public class FragmentoNuevaPelicula extends Fragment {
             int anyo = anyoStr.isEmpty() ? 0 : Integer.parseInt(anyoStr);
             int calificacion = calificacionStr.isEmpty() ? 0 : Integer.parseInt(calificacionStr);
 
+            if (calificacion < 0 || calificacion > 10) {
+                Toast.makeText(getContext(), "La calificación debe estar entre 0 y 10", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
             // Crear objeto Pelicula
             Pelicula pelicula = new Pelicula();

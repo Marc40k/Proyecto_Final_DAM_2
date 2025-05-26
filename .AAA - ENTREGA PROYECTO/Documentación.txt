@@ -22,3 +22,7 @@ Como implementar un if/else ternario para ahorrar espacio ^ (Importante)
 https://developer.android.com/topic/libraries/view-binding#java
 
 Como bindear views en el OnCreateView
+
+https://developer.android.com/training/data-storage/room/accessing-data
+
+Como funciona Room

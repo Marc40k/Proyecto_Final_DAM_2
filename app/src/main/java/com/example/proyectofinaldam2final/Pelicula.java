@@ -75,7 +75,7 @@ public class Pelicula {
 
 
     public int diasEnLaLista() {    // Función para calcular los días que ha estado la película en la lista
-                                    // En verdad es una tontería pero me gusta calcularlo
+                                    // En verdad es una tontería pero me gustaría poder calcularlo
         if (this.fechaAdicion == null || this.fechaVista == null) {
             return -1; // En el xml lo traduciremos a "Aún no se ha visto" o algo por el estilo
         }
