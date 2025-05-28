@@ -26,3 +26,12 @@ Como bindear views en el OnCreateView
 https://developer.android.com/training/data-storage/room/accessing-data
 
 Como funciona Room
+
+https://developer.android.com/reference/com/google/android/material/button/MaterialButtonToggleGroup
+
+Implementación del MaterialButtonToggleGroup en los filtros
+
+https://stackoverflow.com/questions/28295933/difference-between-build-gradle-project-and-build-gradle-module
+
+Diferencia entre el build para el proyecto y el build para la app en gradle
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Año de visualización -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filtrar por año de visualización" />
+        <EditText
+            android:id="@+id/etAnyoFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: 2023"
+            android:inputType="number" />
+
+        <!-- Calificación mínima -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Calificación mínima" />
+        <EditText
+            android:id="@+id/etCalificacionMin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: 7"
+            android:inputType="number" />
+
+        <!-- Tipo de ordenación -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Seleccione tipo de ordenación" />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/tgTipoOrden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:singleSelection="true"
+            app:selectionRequired="false">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rbOrdenCalificacion"
+                style="@style/CustomToggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Por calificación"
+                android:checkable="true" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rbOrdenDiaVisto"
+                style="@style/CustomToggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Día en que se vió"
+                android:checkable="true" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rbOrdenDiaPropuesto"
+                style="@style/CustomToggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Día en que se propuso"
+                android:checkable="true" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- Dirección de ordenación -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Dirección de ordenación" />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/tgDireccionOrden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:singleSelection="true"
+            app:selectionRequired="false">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rbOrdenAscendente"
+                style="@style/CustomToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ascendente"
+                android:checkable="true" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rbOrdenDescendente"
+                style="@style/CustomToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descendente"
+                android:checkable="true" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- Incluir solo con notas -->
+        <CheckBox
+            android:id="@+id/cbConNotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solo películas con notas"
+            android:layout_marginTop="5dp" />
+
+        <!-- Botón aplicar -->
+        <Button
+            android:id="@+id/btnAplicarFiltros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplicar filtros"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>

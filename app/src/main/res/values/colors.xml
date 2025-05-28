@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="toggle_button_text_normal">#373737</color>
+    <color name="toggle_button_text_selected">#FFFFFF</color>
 </resources>
