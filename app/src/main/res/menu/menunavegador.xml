@@ -3,21 +3,19 @@
 
     <item
         android:id="@+id/id_vistas"
-        android:icon="@android:drawable/ic_menu_compass"
+        android:icon="@android:drawable/ic_menu_view"
         android:title="Vistas"
 
         />
     <item
         android:id="@+id/id_lista"
-        android:icon="@android:drawable/btn_star_big_off"
+        android:icon="@android:drawable/ic_menu_agenda"
         android:title="Lista"
 
         />
     <item
         android:id="@+id/id_nueva"
-        android:icon="@android:drawable/ic_menu_rotate"
+        android:icon="@android:drawable/ic_menu_add"
         android:title="Nueva"
-
-
         />
 </menu>
