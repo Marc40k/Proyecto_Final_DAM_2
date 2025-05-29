@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#D9D9D9">
+
+    <!-- Top bar with Editando and Borrar -->
+    <LinearLayout
+        android:id="@+id/tvEditarTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#66000000"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvEditarTituloEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Editando "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBorrar"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:iconSize="34dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:icon="@android:drawable/ic_menu_delete"
+            app:iconTint="@android:color/white"
+            app:backgroundTint="@android:color/holo_red_dark"
+            app:cornerRadius="26dp"
+            android:contentDescription="Borrar"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+    </LinearLayout>
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:id="@+id/layout_editar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_below="@id/tvEditarTopBar"
+        android:layout_above="@id/bottomButtons">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Campos de edición -->
+            <EditText
+                android:id="@+id/etTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Título" />
+
+            <EditText
+                android:id="@+id/etAnyo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Año"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etGenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Género" />
+
+            <EditText
+                android:id="@+id/etDirector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Director" />
+
+            <EditText
+                android:id="@+id/etNota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Notas" />
+
+            <EditText
+                android:id="@+id/etCalificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Calificación (1-10)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etFechaAdicion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de adición (dd/MM/yyyy)"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/etFechaVista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de visualización (dd/MM/yyyy)"
+                android:inputType="text" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchEstado"
+                android:text="¿Vista?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom buttons -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:background="#CECECE"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:backgroundTint="@android:color/darker_gray"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+    </LinearLayout>
+</RelativeLayout>

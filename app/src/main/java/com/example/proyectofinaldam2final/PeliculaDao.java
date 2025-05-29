@@ -1,8 +1,10 @@
 package com.example.proyectofinaldam2final;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.RewriteQueriesToDropUnusedColumns;
 import androidx.room.Update;
 
 import java.util.List;
@@ -32,4 +34,9 @@ public interface PeliculaDao {
 
     @Query("SELECT * FROM Pelicula WHERE vista = :b")
     List<Pelicula> obtenerPeliculasPorEstado(boolean b);
+
+
+    @Delete
+    void delete(Pelicula pelicula);
+
 }

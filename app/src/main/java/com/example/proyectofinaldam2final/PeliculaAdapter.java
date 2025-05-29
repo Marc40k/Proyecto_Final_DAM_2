@@ -85,10 +85,10 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
             //Es la lista de películas pendientes o la lista de películas vistas:
             if (esListaPendiente) { // Lista de películas pendientes
                 fecha = pelicula.getFechaAdicion();
-                tvFecha.setText(fecha != null ? "Añadida: "+ fecha : "Sin fecha");
+                tvFecha.setText((fecha != null && !fecha.trim().isEmpty()) ? "Añadida: " + fecha : "Sin fecha");
             } else { // Lista de películas vistas
                 fecha = pelicula.getFechaVista();
-                tvFecha.setText(fecha != null ? "Vista: "+ fecha : "Sin fecha");
+                tvFecha.setText((fecha != null && !fecha.trim().isEmpty()) ? "Vista: " + fecha : "Sin fecha");
                 tvCalificacion.setText(pelicula.getCalificacion() > 0 ? pelicula.getCalificacion() + "/10" : "-");
             }
 

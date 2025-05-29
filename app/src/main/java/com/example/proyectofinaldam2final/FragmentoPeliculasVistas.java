@@ -39,6 +39,9 @@ public class FragmentoPeliculasVistas extends Fragment {
     private EditText etBuscar;
     private List<Pelicula> peliculasOriginales;
 
+
+
+
     public FragmentoPeliculasVistas() {
         // Constructor vacío
     }
@@ -184,8 +187,12 @@ public class FragmentoPeliculasVistas extends Fragment {
 
                     @Override
                     public void onPeliculaLongClick(Pelicula pelicula) {
-                        // abrir actividad/fragmento de edición
-                        // ejemplo: abrirPeliculaDetalle(pelicula);
+                        FragmentoEditarPelicula fragmento = FragmentoEditarPelicula.newInstance(pelicula);
+                        requireActivity().getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container, fragmento) // Usa tu contenedor real
+                                .addToBackStack(null)
+                                .commit();
                     }
 
                     @Override
